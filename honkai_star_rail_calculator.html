@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="shortcut icon" href="/icon_16.ico"  />
+        <title>星穹鐵道 傷害效益計算機</title>
+        <style>
+            .contant1,.contant2,.contant3,.contant4{
+                display: flex;
+            }
+            .input,.DEF_Extra{
+                width: 10px;
+            }
+        </style>
+
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <!--標題-->
+        <h2>數值設定</h2> 
+        <div class="contant4">
+        <div>
+            <div class="contant1">
+                <!--基礎數值box-->
+                <div class="box1">
+                    <h3>基礎數值</h3>
+                    <label for="HP_Base">生命值&emsp;</label>
+                    <input type="text" id="HP_Base" name="HP_Base" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="ATK_Base">攻擊力&emsp;</label>
+                    <input type="text" id="ATK_Base" name="ATK_Base" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="DEF_Base">防禦力&emsp;</label>
+                    <input type="text" id="DEF_Base" name="DEF_Base" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="SPD_Base">速度&emsp;&emsp;</label>
+                    <input type="text" id="SPD_Base" name="SPD_Base" maxlength="5" size="4" required/>
+                </div>
+                &emsp;&emsp;
+                <!--額外數值box-->
+                <div class="box2">
+                    <h3>額外數值</h3>
+                    <label for="HP_Extra">生命值&emsp;</label>
+                    <input type="text" id="HP_Extra" name="HP_Extra" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="ATK_Extra">攻擊力&emsp;</label>
+                    <input type="text" id="ATK_Extra" name="ATK_Extra" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="DEF_Extra">防禦力&emsp;</label>
+                    <input type="text" id="DEF_Extra" name="DEF_Extra" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="SPD_Extra">速度&emsp;&emsp;</label>
+                    <input type="text" id="SPD_Extra" name="SPD_Extra" maxlength="5" size="4" required/>            
+                </div>
+                &emsp;&emsp;
+                <div class="box3">
+                    <h3>暴擊乘區</h3>
+                    <label for="Crit_Rate">暴擊率&emsp;</label>
+                    <input type="text" id="Crit_Rate" name="Crit_Rate" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="Crit_DMG">暴擊傷害</label>
+                    <input type="text" id="Crit_DMG" name="Crit_DMG" maxlength="5" size="4" required/>
+                </div>            
+            </div>
+
+            <div class="contant2">
+                <!--基礎數值box-->
+                <div class="box4">
+                    <h3>獨立乘區</h3>
+                    <label for="DMG_BST">角色增傷</label>
+                    <input type="text" id="DMG_BST" name="DMG_BST" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="DMG_Weak">角色虛弱</label>
+                    <input type="text" id="DMG_Weak" name="DMG_Weak" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="DMG_INC">敵方易傷</label>
+                    <input type="text" id="DMG_INC" name="DMG_INC" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="DMG_DEC">敵方減傷</label>
+                    <input type="text" id="DMG_DEC" name="DMG_DEC" maxlength="5" size="4" required/>
+                </div>
+                &emsp;&emsp;
+                <!--額外數值box-->
+                <div class="box5">
+                    <h3>抗性乘區</h3>
+                    <label for="HP_Extra">穿透抗性</label>
+                    <input type="text" id="HP_Extra" name="HP_Extra" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="ATK_Extra">降低抗性</label>
+                    <input type="text" id="ATK_Extra" name="ATK_Extra" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="DEF_Extra">弱點抗性</label>
+                    <select id="DEF_Extra" name="DEF_Extra" size="1" required>
+                        <option value="有弱點">有弱點</option>
+                        <option value="無弱點">無弱點</option>
+                    </select>
+                    <br/><br/>
+                    <label for="SPD_Extra">屬性抗性</label>
+                    <select id="DEF_Extra" name="DEF_Extra" size="1" required>
+                        <option value="有抗性">有抗性</option>
+                        <option value="無抗性">無抗性</option>
+                    </select>         
+                </div>
+                &emsp;&emsp;
+                <div class="box6">
+                    <h3>防禦乘區</h3>
+                    <label for="CHAR_LV">角色等級</label>
+                    <input type="text" id="CHAR_LV" name="CHAR_LV" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="Enemy_LV">敵方等級</label>
+                    <input type="text" id="Enemy_LV" name="Enemy_LV" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="DEF_DEC">防禦降低</label>
+                    <input type="text" id="DEF_DEC" name="DEF_DEC" maxlength="5" size="4" required/>
+                    <br/><br/>
+                    <label for="DEF_IGN">無視防禦</label>
+                    <input type="text" id="DEF_IGN" name="DEF_IGN" maxlength="5" size="4" required/>
+                </div> 
+                &emsp;&emsp;&emsp;          
+            </div>
+        </div>
+            <div class="contant3">
+                <div class="box7">
+                    <br/><br/>
+                    <label for="DMG_Ratio">技能倍率</label>
+                    <br/><br/>
+                    <input type="text" id="DMG_Ratio" name="DMG_Ratio" maxlength="5" size="3" required/>
+                    <select id="Ratio_Type" name="Ratio_Type" size="1" required>
+                        <option value="生命%">生命%</option>
+                        <option value="攻擊%">攻擊%</option>
+                        <option value="防禦%">防禦%</option>
+                    </select>
+                    <br/><br/><br/><br/>
+                    <h3>&emsp;&emsp;理論傷害量</h3>
+                    沒暴擊&emsp;&emsp;&emsp;0
+                    <br/>
+                    有暴擊&emsp;&emsp;&emsp;0
+                    <br/>
+                    期望傷害&emsp;&emsp;0
+                    <br/><br/><br/><br/>
+                    <button class="calculate">
+                        計算
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
